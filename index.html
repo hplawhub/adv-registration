@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Advocate Registration | HP Congress</title>
+  <title>Advocate Registration | Himachal Pradesh Congress</title>
 
   <style>
     * {
@@ -20,27 +21,34 @@
     }
 
     .container {
-      max-width: 620px;
+      width: 100%;
+      max-width: 680px;
       margin: auto;
     }
 
+    /* HEADER */
+
     .header {
       background: linear-gradient(135deg, #7f0000, #b30000);
-      color: white;
+      color: #ffffff;
       text-align: center;
       padding: 28px 20px;
       border-radius: 20px 20px 0 0;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
     }
 
     .header h1 {
       margin: 0;
       font-size: 24px;
       line-height: 1.35;
+      font-weight: 700;
     }
 
     .header h2 {
       margin: 7px 0 10px;
-      font-size: 20px;
+      font-size: 21px;
+      line-height: 1.3;
+      font-weight: 800;
     }
 
     .header p {
@@ -54,28 +62,87 @@
       background: #138808;
     }
 
+    /* MAIN CARD */
+
     .card {
-      background: white;
-      padding: 28px 23px 32px;
+      background: #ffffff;
+      padding: 25px 22px 32px;
       border-radius: 0 0 20px 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     }
+
+    /* INTRO */
+
+    .intro-section {
+      margin-bottom: 28px;
+      padding: 21px;
+      background: #fafafa;
+      border: 1px solid #e1e1e1;
+      border-left: 4px solid #8b0000;
+      border-radius: 12px;
+    }
+
+    .intro-section p {
+      color: #444;
+      font-size: 14px;
+      line-height: 1.7;
+      margin: 10px 0;
+    }
+
+    .info-heading {
+      margin-top: 21px;
+      margin-bottom: 8px;
+      color: #138808;
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .intro-section ul {
+      margin: 8px 0 0;
+      padding-left: 21px;
+    }
+
+    .intro-section li {
+      margin-bottom: 8px;
+      color: #444;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .form-heading {
+      margin-top: 25px;
+      padding-top: 19px;
+      border-top: 1px solid #d9d9d9;
+      color: #8b0000;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .form-subheading {
+      margin-top: 5px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    /* SECTION */
 
     .section-title {
       margin: 5px 0 20px;
       padding-left: 11px;
       border-left: 4px solid #8b0000;
       color: #8b0000;
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 800;
       text-transform: uppercase;
     }
 
     .professional {
-      margin-top: 28px;
+      margin-top: 29px;
       border-left-color: #138808;
       color: #138808;
     }
+
+    /* FORM */
 
     .field {
       margin-bottom: 17px;
@@ -98,16 +165,23 @@
       padding: 13px;
       border: 1px solid #d1d1d1;
       border-radius: 9px;
-      background: #fff;
+      background: #ffffff;
       font-size: 15px;
+      color: #222;
+    }
+
+    input::placeholder {
+      color: #999;
     }
 
     input:focus,
     select:focus {
       outline: none;
       border-color: #8b0000;
-      box-shadow: 0 0 0 3px rgba(139,0,0,.10);
+      box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.10);
     }
+
+    /* DECLARATION */
 
     .declaration {
       display: flex;
@@ -134,6 +208,8 @@
       color: #555;
     }
 
+    /* SUBMIT */
+
     .submit-btn {
       width: 100%;
       margin-top: 22px;
@@ -141,16 +217,19 @@
       border: none;
       border-radius: 10px;
       background: linear-gradient(135deg, #8b0000, #b30000);
-      color: white;
+      color: #ffffff;
       font-size: 16px;
       font-weight: 800;
       cursor: pointer;
+      box-shadow: 0 6px 18px rgba(139, 0, 0, 0.18);
     }
 
     .submit-btn:disabled {
-      opacity: .65;
+      opacity: 0.65;
       cursor: not-allowed;
     }
+
+    /* SUCCESS */
 
     .success {
       display: none;
@@ -174,6 +253,13 @@
     .success h2 {
       color: #138808;
       font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .success p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.55;
     }
 
     .district-box {
@@ -184,6 +270,12 @@
       border-radius: 11px;
     }
 
+    .district-label {
+      color: #777;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
     .district-name {
       margin-top: 6px;
       color: #8b0000;
@@ -191,16 +283,19 @@
       font-weight: 800;
     }
 
+    /* WHATSAPP */
+
     .whatsapp-btn {
       display: block;
       width: 100%;
       padding: 15px;
       border-radius: 10px;
       background: #138808;
-      color: white;
+      color: #ffffff;
       text-decoration: none;
       font-size: 16px;
       font-weight: 800;
+      box-shadow: 0 6px 18px rgba(19, 136, 8, 0.18);
     }
 
     .note {
@@ -210,14 +305,27 @@
       line-height: 1.5;
     }
 
+    /* FOOTER */
+
     .footer {
       text-align: center;
       margin-top: 15px;
+      padding: 4px 0 10px;
       color: #777;
-      font-size: 11px;
+      font-size: 12px;
+      line-height: 1.6;
     }
 
+    .footer .hp-congress {
+      font-weight: 700;
+      color: #555;
+      margin-top: 2px;
+    }
+
+    /* MOBILE */
+
     @media (max-width: 480px) {
+
       body {
         padding: 7px;
       }
@@ -230,100 +338,288 @@
         font-size: 21px;
       }
 
+      .header h2 {
+        font-size: 19px;
+      }
+
+      .header p {
+        font-size: 13px;
+      }
+
       .card {
-        padding: 23px 17px 28px;
+        padding: 20px 17px 28px;
+      }
+
+      .intro-section {
+        padding: 17px;
+      }
+
+      .intro-section p {
+        font-size: 13px;
+      }
+
+      .intro-section li {
+        font-size: 12.5px;
+      }
+
+      .form-heading {
+        font-size: 18px;
       }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
 <div class="container">
 
+
+  <!-- HEADER -->
+
   <div class="header">
-    <h1>Law, Human Rights & RTI Department</h1>
-    <h2>HP Congress</h2>
-    <p>Advocate Registration & District Coordination Network</p>
+
+    <h1>
+      Law, Human Rights & RTI Department
+    </h1>
+
+    <h2>
+      Himachal Pradesh Congress
+    </h2>
+
+    <p>
+      Advocate Registration & District Coordination Network
+    </p>
+
   </div>
+
 
   <div class="green-line"></div>
 
+
+  <!-- MAIN CARD -->
+
   <div class="card">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro-section">
+
+      <p>
+        Welcome to the Advocate Registration Portal of the
+        <strong>Law, Human Rights & RTI Department,
+        Himachal Pradesh Congress.</strong>
+      </p>
+
+      <p>
+        This registration is intended for district-level registration,
+        coordination and communication among advocates associated with
+        the Department.
+      </p>
+
+
+      <div class="info-heading">
+        Registration Instructions
+      </div>
+
+
+      <ul>
+
+        <li>
+          Please provide your correct and complete details.
+        </li>
+
+        <li>
+          Select your respective district carefully.
+        </li>
+
+        <li>
+          Ensure that your mobile and WhatsApp numbers are correct.
+        </li>
+
+        <li>
+          After submitting the registration, please join the WhatsApp
+          group assigned to your selected district.
+        </li>
+
+      </ul>
+
+
+      <div class="info-heading">
+        District Coordination
+      </div>
+
+
+      <p>
+        Separate WhatsApp groups have been created for the districts
+        of Himachal Pradesh. After successful registration, the
+        WhatsApp group for your selected district will be displayed
+        automatically.
+      </p>
+
+
+      <div class="form-heading">
+        ADVOCATE REGISTRATION
+      </div>
+
+
+      <div class="form-subheading">
+        Please complete the form below
+      </div>
+
+    </div>
+
+
+    <!-- FORM -->
 
     <div id="formArea">
 
       <form id="registrationForm">
 
+
+        <!-- PERSONAL DETAILS -->
+
         <div class="section-title">
           Personal Details
         </div>
 
-        <div class="field">
-          <label>Full Name <span class="required">*</span></label>
-          <input id="name" type="text" placeholder="Enter your full name" required>
-        </div>
 
         <div class="field">
-          <label>Father’s / Husband’s Name <span class="required">*</span></label>
-          <input id="parentName" type="text" placeholder="Enter Father’s / Husband’s Name" required>
+
+          <label>
+            Full Name <span class="required">*</span>
+          </label>
+
+          <input
+            id="name"
+            type="text"
+            placeholder="Enter your full name"
+            required
+          >
+
         </div>
 
-        <div class="field">
-          <label>Email ID <span class="required">*</span></label>
-          <input id="email" type="email" placeholder="Enter your email address" required>
-        </div>
 
         <div class="field">
-          <label>Mobile Number <span class="required">*</span></label>
+
+          <label>
+            Father’s / Husband’s Name
+            <span class="required">*</span>
+          </label>
+
+          <input
+            id="parentName"
+            type="text"
+            placeholder="Enter Father’s / Husband’s Name"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Email ID <span class="required">*</span>
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            placeholder="Enter your email address"
+            required
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label>
+            Mobile Number <span class="required">*</span>
+          </label>
+
           <input
             id="mobile"
             type="tel"
             maxlength="10"
             pattern="[0-9]{10}"
+            inputmode="numeric"
             placeholder="10-digit mobile number"
             required
           >
+
         </div>
 
+
         <div class="field">
-          <label>WhatsApp Number <span class="required">*</span></label>
+
+          <label>
+            WhatsApp Number <span class="required">*</span>
+          </label>
+
           <input
             id="whatsapp"
             type="tel"
             maxlength="10"
             pattern="[0-9]{10}"
+            inputmode="numeric"
             placeholder="10-digit WhatsApp number"
             required
           >
+
         </div>
+
+
+        <!-- PROFESSIONAL DETAILS -->
 
         <div class="section-title professional">
           Professional Details
         </div>
 
+
         <div class="field">
-          <label>Bar Association <span class="required">*</span></label>
+
+          <label>
+            Bar Association <span class="required">*</span>
+          </label>
+
           <input
             id="bar"
             type="text"
             placeholder="Enter Bar Association"
             required
           >
+
         </div>
 
+
         <div class="field">
-          <label>Bar Council Enrollment Number <span class="required">*</span></label>
+
+          <label>
+            Bar Council Enrollment Number
+            <span class="required">*</span>
+          </label>
+
           <input
             id="enrollment"
             type="text"
             placeholder="Enter enrollment number"
             required
           >
+
         </div>
 
+
         <div class="field">
-          <label>Year of Enrollment</label>
+
+          <label>
+            Year of Enrollment
+          </label>
+
           <input
             id="year"
             type="number"
@@ -331,35 +627,101 @@
             max="2030"
             placeholder="e.g. 2018"
           >
+
         </div>
+
+
+        <!-- DISTRICT -->
 
         <div class="field">
-          <label>District <span class="required">*</span></label>
+
+          <label>
+            District <span class="required">*</span>
+          </label>
+
 
           <select id="district" required>
-            <option value="">Select District</option>
-            <option value="Bilaspur">Bilaspur</option>
-            <option value="Chamba">Chamba</option>
-            <option value="Hamirpur">Hamirpur</option>
-            <option value="Kangra">Kangra</option>
-            <option value="Kinnaur">Kinnaur</option>
-            <option value="Kullu">Kullu</option>
-            <option value="Lahaul & Spiti">Lahaul & Spiti</option>
-            <option value="Mandi">Mandi</option>
-            <option value="Shimla">Shimla</option>
-            <option value="Sirmaur">Sirmaur</option>
-            <option value="Solan">Solan</option>
-            <option value="Una">Una</option>
+
+            <option value="">
+              Select District
+            </option>
+
+            <option value="Bilaspur">
+              Bilaspur
+            </option>
+
+            <option value="Chamba">
+              Chamba
+            </option>
+
+            <option value="Hamirpur">
+              Hamirpur
+            </option>
+
+            <option value="Kangra">
+              Kangra
+            </option>
+
+            <option value="Kinnaur">
+              Kinnaur
+            </option>
+
+            <option value="Kullu">
+              Kullu
+            </option>
+
+            <option value="Lahaul & Spiti">
+              Lahaul & Spiti
+            </option>
+
+            <option value="Mandi">
+              Mandi
+            </option>
+
+            <option value="Shimla">
+              Shimla
+            </option>
+
+            <option value="Sirmaur">
+              Sirmaur
+            </option>
+
+            <option value="Solan">
+              Solan
+            </option>
+
+            <option value="Una">
+              Una
+            </option>
+
           </select>
+
         </div>
+
+
+        <!-- DECLARATION -->
 
         <div class="declaration">
-          <input id="declaration" type="checkbox" required>
+
+          <input
+            id="declaration"
+            type="checkbox"
+            required
+          >
 
           <div class="declaration-text">
-            I confirm that the information provided by me is correct and agree to join the district-level legal coordination network of the Law, Human Rights & RTI Department — HP Congress.
+
+            I confirm that the information provided by me is correct
+            and agree to join the district-level legal coordination
+            network of the Law, Human Rights & RTI Department —
+            Himachal Pradesh Congress.
+
           </div>
+
         </div>
+
+
+        <!-- SUBMIT -->
 
         <button
           type="submit"
@@ -369,29 +731,52 @@
           SUBMIT REGISTRATION
         </button>
 
+
       </form>
 
     </div>
 
 
-    <div id="successArea" class="success">
+    <!-- SUCCESS -->
 
-      <div class="success-icon">✓</div>
+    <div
+      id="successArea"
+      class="success"
+    >
 
-      <h2>Registration Successful</h2>
+      <div class="success-icon">
+        ✓
+      </div>
+
+
+      <h2>
+        Registration Successful
+      </h2>
+
 
       <p>
         Your advocate registration has been successfully submitted.
       </p>
 
+
       <div class="district-box">
-        Your District
-        <div id="selectedDistrict" class="district-name"></div>
+
+        <div class="district-label">
+          Your District
+        </div>
+
+        <div
+          id="selectedDistrict"
+          class="district-name"
+        ></div>
+
       </div>
+
 
       <p>
         Please join your district WhatsApp Coordination Group.
       </p>
+
 
       <a
         id="whatsappButton"
@@ -403,182 +788,264 @@
         JOIN WHATSAPP GROUP
       </a>
 
+
       <div class="note">
-        Please join the designated district WhatsApp group for district-level coordination and communication.
+
+        Please join the designated district WhatsApp group
+        for district-level coordination and communication.
+
       </div>
 
     </div>
 
+
   </div>
 
+
+  <!-- FOOTER -->
+
   <div class="footer">
-    Law, Human Rights & RTI Department — HP Congress
+
+    <div>
+      Law, Human Rights & RTI Department
+    </div>
+
+    <div class="hp-congress">
+      Himachal Pradesh Congress
+    </div>
+
   </div>
+
 
 </div>
 
 
 <script>
 
-const API_URL =
-  'https://script.google.com/macros/s/AKfycbxMWbIjqpdctRGcBYVHyydtCzeoFPTro38D2tV0zyFWO5ZzdYJBIdwkW-wQ6EMtmvVI/exec';
+  /* NEW APPS SCRIPT BACKEND */
+
+  const API_URL =
+    'https://script.google.com/macros/s/AKfycbxMWbIjqpdctRGcBYVHyydtCzeoFPTro38D2tV0zyFWO5ZzdYJBIdwkW-wQ6EMtmvVI/exec';
 
 
-const groups = {
+  /* DISTRICT WHATSAPP GROUPS */
 
-  'Bilaspur':
-    'https://chat.whatsapp.com/GpKP6DIyTLyBJxb9x6Bu9y',
+  const groups = {
 
-  'Chamba':
-    'https://chat.whatsapp.com/K0inxbnc2YeHoMNR6yXIQZ',
+    'Bilaspur':
+      'https://chat.whatsapp.com/GpKP6DIyTLyBJxb9x6Bu9y',
 
-  'Hamirpur':
-    'https://chat.whatsapp.com/ClBktgTFCbqIzIP4CpmpBQ',
+    'Chamba':
+      'https://chat.whatsapp.com/K0inxbnc2YeHoMNR6yXIQZ',
 
-  'Kangra':
-    'https://chat.whatsapp.com/H7KL8HFpSzgATsoGSQecl2',
+    'Hamirpur':
+      'https://chat.whatsapp.com/ClBktgTFCbqIzIP4CpmpBQ',
 
-  'Kinnaur':
-    'https://chat.whatsapp.com/JmttfrTQIslBf6WeDGgXYR',
+    'Kangra':
+      'https://chat.whatsapp.com/H7KL8HFpSzgATsoGSQecl2',
 
-  'Kullu':
-    'https://chat.whatsapp.com/LRt00JP34gYJCzl5coSiPL',
+    'Kinnaur':
+      'https://chat.whatsapp.com/JmttfrTQIslBf6WeDGgXYR',
 
-  'Lahaul & Spiti':
-    'https://chat.whatsapp.com/CG7CsEYstETICvIKePn67z',
+    'Kullu':
+      'https://chat.whatsapp.com/LRt00JP34gYJCzl5coSiPL',
 
-  'Mandi':
-    'https://chat.whatsapp.com/JMXa3AO201vB6BmQwz5SYd',
+    'Lahaul & Spiti':
+      'https://chat.whatsapp.com/CG7CsEYstETICvIKePn67z',
 
-  'Shimla':
-    'https://chat.whatsapp.com/H3r3RfZ3ve2LkgZj5swC6w',
+    'Mandi':
+      'https://chat.whatsapp.com/JMXa3AO201vB6BmQwz5SYd',
 
-  'Sirmaur':
-    'https://chat.whatsapp.com/Ikd9phpaXcMEZMIhcNcXrq',
+    'Shimla':
+      'https://chat.whatsapp.com/H3r3RfZ3ve2LkgZj5swC6w',
 
-  'Solan':
-    'https://chat.whatsapp.com/EeSApcbT40TFhemGmVunLt',
+    'Sirmaur':
+      'https://chat.whatsapp.com/Ikd9phpaXcMEZMIhcNcXrq',
 
-  'Una':
-    'https://chat.whatsapp.com/LCUlwE5SQKHGUvkkFqRKb2'
+    'Solan':
+      'https://chat.whatsapp.com/EeSApcbT40TFhemGmVunLt',
 
-};
+    'Una':
+      'https://chat.whatsapp.com/LCUlwE5SQKHGUvkkFqRKb2'
 
-
-document
-  .getElementById('registrationForm')
-  .addEventListener('submit', async function(e) {
-
-    e.preventDefault();
-
-    const button =
-      document.getElementById('submitButton');
-
-    button.disabled = true;
-    button.innerText = 'SUBMITTING...';
+  };
 
 
-    const data = new URLSearchParams();
+  /* FORM SUBMISSION */
 
-    data.append(
-      'name',
-      document.getElementById('name').value.trim()
+  document
+    .getElementById('registrationForm')
+    .addEventListener(
+      'submit',
+      async function(event) {
+
+        event.preventDefault();
+
+
+        const button =
+          document.getElementById('submitButton');
+
+
+        button.disabled = true;
+
+        button.innerText =
+          'SUBMITTING...';
+
+
+        const district =
+          document
+            .getElementById('district')
+            .value;
+
+
+        const data =
+          new URLSearchParams();
+
+
+        data.append(
+          'name',
+          document
+            .getElementById('name')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'parentName',
+          document
+            .getElementById('parentName')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'email',
+          document
+            .getElementById('email')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'mobile',
+          document
+            .getElementById('mobile')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'whatsapp',
+          document
+            .getElementById('whatsapp')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'bar',
+          document
+            .getElementById('bar')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'enrollment',
+          document
+            .getElementById('enrollment')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'year',
+          document
+            .getElementById('year')
+            .value
+            .trim()
+        );
+
+
+        data.append(
+          'district',
+          district
+        );
+
+
+        try {
+
+          await fetch(
+            API_URL,
+            {
+              method: 'POST',
+              mode: 'no-cors',
+              body: data
+            }
+          );
+
+
+          document
+            .getElementById('formArea')
+            .style.display = 'none';
+
+
+          document
+            .getElementById('successArea')
+            .style.display = 'block';
+
+
+          document
+            .getElementById('selectedDistrict')
+            .innerText =
+            district;
+
+
+          document
+            .getElementById('whatsappButton')
+            .href =
+            groups[district];
+
+
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+
+        }
+
+
+        catch(error) {
+
+          console.error(error);
+
+
+          alert(
+            'Registration could not be completed. Please try again.'
+          );
+
+
+          button.disabled = false;
+
+
+          button.innerText =
+            'SUBMIT REGISTRATION';
+
+        }
+
+      }
     );
-
-    data.append(
-      'parentName',
-      document.getElementById('parentName').value.trim()
-    );
-
-    data.append(
-      'email',
-      document.getElementById('email').value.trim()
-    );
-
-    data.append(
-      'mobile',
-      document.getElementById('mobile').value.trim()
-    );
-
-    data.append(
-      'whatsapp',
-      document.getElementById('whatsapp').value.trim()
-    );
-
-    data.append(
-      'bar',
-      document.getElementById('bar').value.trim()
-    );
-
-    data.append(
-      'enrollment',
-      document.getElementById('enrollment').value.trim()
-    );
-
-    data.append(
-      'year',
-      document.getElementById('year').value.trim()
-    );
-
-    const district =
-      document.getElementById('district').value;
-
-    data.append('district', district);
-
-
-    try {
-
-      await fetch(API_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        body: data
-      });
-
-
-      document
-        .getElementById('formArea')
-        .style.display = 'none';
-
-
-      document
-        .getElementById('successArea')
-        .style.display = 'block';
-
-
-      document
-        .getElementById('selectedDistrict')
-        .innerText = district;
-
-
-      document
-        .getElementById('whatsappButton')
-        .href = groups[district];
-
-
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-
-
-    } catch (error) {
-
-      console.error(error);
-
-      alert(
-        'Registration could not be completed. Please try again.'
-      );
-
-      button.disabled = false;
-
-      button.innerText =
-        'SUBMIT REGISTRATION';
-
-    }
-
-  });
 
 </script>
 
+
 </body>
+
 </html>
