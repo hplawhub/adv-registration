@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,487 +9,863 @@
 
 <style>
 
-*{
-  box-sizing:border-box;
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+  box-sizing: border-box;
 }
 
-body{
-  margin:0;
-  padding:12px;
-  font-family:Arial,Helvetica,sans-serif;
-  background:linear-gradient(135deg,#f4f4f4,#ffffff,#f1f7f1);
-  color:#222;
+body {
+  margin: 0;
+  padding: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f3f3f3, #ffffff, #f1f7f1);
+  color: #222;
 }
 
-.container{
-  width:100%;
-  max-width:760px;
-  margin:auto;
+.container {
+  width: 100%;
+  max-width: 760px;
+  margin: auto;
 }
 
-/* ================= HEADER ================= */
 
-.header{
-  position:relative;
-  overflow:hidden;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:245px;
-  padding:25px 135px;
-  text-align:center;
-  color:white;
-  background:linear-gradient(135deg,#780000,#b40000);
-  border-radius:20px 20px 0 0;
-  box-shadow:0 8px 25px rgba(0,0,0,.12);
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 245px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px 140px;
+
+  text-align: center;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #780000,
+    #b40000
+  );
+
+  border-radius: 20px 20px 0 0;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.header-content{
-  position:relative;
-  z-index:2;
-  width:100%;
+.header-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
 }
 
-.header h1{
-  margin:0;
-  font-size:24px;
-  line-height:1.35;
-  font-weight:700;
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.35;
+  font-weight: 700;
 }
 
-.header h2{
-  margin:8px 0 12px;
-  font-size:23px;
-  line-height:1.3;
-  font-weight:800;
+.header h2 {
+  margin: 8px 0 12px;
+  font-size: 23px;
+  line-height: 1.3;
+  font-weight: 800;
 }
 
-.header p{
-  margin:0;
-  font-size:15px;
-  line-height:1.5;
+.header p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-.header-photo{
-  position:absolute;
-  bottom:0;
-  object-fit:cover;
-  object-position:top center;
-  border-radius:14px 14px 0 0;
-  z-index:1;
-  background:#fff;
-  box-shadow:0 3px 12px rgba(0,0,0,.20);
+
+/* =========================================================
+   HEADER IMAGES
+========================================================= */
+
+.header-photo {
+  position: absolute;
+  bottom: 0;
+
+  object-fit: cover;
+  object-position: top center;
+
+  background: #ffffff;
+
+  border-radius: 14px 14px 0 0;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.20);
+
+  z-index: 2;
 }
+
 
 /* CM - LARGER */
 
-.cm-photo{
-  left:12px;
-  width:125px;
-  height:210px;
+.cm-photo {
+  left: 12px;
+
+  width: 125px;
+  height: 210px;
 }
+
 
 /* PRESIDENT - SMALLER */
 
-.president-photo{
-  right:16px;
-  width:95px;
-  height:155px;
+.president-photo {
+  right: 16px;
+
+  width: 95px;
+  height: 155px;
 }
 
-/* GREEN LINE */
 
-.green-line{
-  height:6px;
-  background:#138808;
+/* =========================================================
+   GREEN LINE
+========================================================= */
+
+.green-line {
+  height: 6px;
+  background: #138808;
 }
 
-/* ================= MAIN ================= */
 
-.card{
-  background:#fff;
-  padding:25px 22px 32px;
-  border-radius:0 0 20px 20px;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.card {
+  background: #ffffff;
+
+  padding: 25px 22px 28px;
+
+  border-radius: 0 0 20px 20px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* ================= INTRO ================= */
 
-.intro-section{
-  margin-bottom:28px;
-  padding:21px;
-  background:#fafafa;
-  border:1px solid #e1e1e1;
-  border-left:5px solid #8b0000;
-  border-radius:12px;
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.intro-section {
+  margin-bottom: 28px;
+
+  padding: 21px;
+
+  background: #fafafa;
+
+  border: 1px solid #e1e1e1;
+
+  border-left: 5px solid #8b0000;
+
+  border-radius: 12px;
 }
 
-.intro-section p{
-  color:#444;
-  font-size:14px;
-  line-height:1.7;
-  margin:10px 0;
+.intro-section p {
+  color: #444;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  margin: 10px 0;
 }
 
-.info-heading{
-  margin-top:21px;
-  margin-bottom:8px;
-  color:#138808;
-  font-size:16px;
-  font-weight:800;
+.info-heading {
+  margin-top: 21px;
+
+  margin-bottom: 8px;
+
+  color: #138808;
+
+  font-size: 16px;
+
+  font-weight: 800;
 }
 
-.intro-section ul{
-  margin:8px 0 0;
-  padding-left:21px;
+.intro-section ul {
+  margin: 8px 0 0;
+  padding-left: 21px;
 }
 
-.intro-section li{
-  margin-bottom:8px;
-  color:#444;
-  font-size:13px;
-  line-height:1.55;
+.intro-section li {
+  margin-bottom: 8px;
+
+  color: #444;
+
+  font-size: 13px;
+
+  line-height: 1.55;
 }
 
-.form-heading{
-  margin-top:25px;
-  padding-top:19px;
-  border-top:1px solid #d9d9d9;
-  color:#8b0000;
-  font-size:20px;
-  font-weight:800;
+
+/* =========================================================
+   REGISTRATION HEADING
+========================================================= */
+
+.form-heading {
+  margin-top: 25px;
+
+  padding-top: 19px;
+
+  border-top: 1px solid #d9d9d9;
+
+  color: #8b0000;
+
+  font-size: 20px;
+
+  font-weight: 800;
 }
 
-.form-subheading{
-  margin-top:5px;
-  color:#777;
-  font-size:13px;
+.form-subheading {
+  margin-top: 5px;
+
+  color: #777;
+
+  font-size: 13px;
 }
 
-/* ================= SECTION ================= */
 
-.section-title{
-  margin:5px 0 20px;
-  padding-left:11px;
-  border-left:4px solid #8b0000;
-  color:#8b0000;
-  font-size:16px;
-  font-weight:800;
-  text-transform:uppercase;
+/* =========================================================
+   FORM SECTIONS
+========================================================= */
+
+.section-title {
+  margin: 5px 0 20px;
+
+  padding-left: 11px;
+
+  border-left: 4px solid #8b0000;
+
+  color: #8b0000;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
 }
 
-.professional{
-  margin-top:29px;
-  border-left-color:#138808;
-  color:#138808;
+.professional {
+  margin-top: 29px;
+
+  border-left-color: #138808;
+
+  color: #138808;
 }
 
-/* ================= FORM ================= */
 
-.field{
-  margin-bottom:17px;
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.field {
+  margin-bottom: 17px;
 }
 
-label{
-  display:block;
-  margin-bottom:7px;
-  font-size:14px;
-  font-weight:700;
+label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 14px;
+
+  font-weight: 700;
 }
 
-.required{
-  color:#b30000;
+.required {
+  color: #b30000;
 }
 
 input,
-select{
-  width:100%;
-  padding:13px;
-  border:1px solid #d1d1d1;
-  border-radius:9px;
-  background:#fff;
-  font-size:15px;
-  color:#222;
+select {
+  width: 100%;
+
+  padding: 13px;
+
+  border: 1px solid #d1d1d1;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  font-size: 15px;
+
+  color: #222;
 }
 
-input::placeholder{
-  color:#999;
+input::placeholder {
+  color: #999;
 }
 
 input:focus,
-select:focus{
-  outline:none;
-  border-color:#8b0000;
-  box-shadow:0 0 0 3px rgba(139,0,0,.10);
+select:focus {
+  outline: none;
+
+  border-color: #8b0000;
+
+  box-shadow: 0 0 0 3px rgba(139,0,0,0.10);
 }
 
-/* ================= DECLARATION ================= */
 
-.declaration{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  margin-top:22px;
-  padding:15px;
-  background:#f7faf7;
-  border:1px solid #d7e6d9;
-  border-radius:11px;
+/* =========================================================
+   DECLARATION
+========================================================= */
+
+.declaration {
+  display: flex;
+
+  gap: 10px;
+
+  align-items: flex-start;
+
+  margin-top: 22px;
+
+  padding: 15px;
+
+  background: #f7faf7;
+
+  border: 1px solid #d7e6d9;
+
+  border-radius: 11px;
 }
 
-.declaration input{
-  width:18px;
-  height:18px;
-  margin-top:2px;
-  flex-shrink:0;
-  accent-color:#138808;
+.declaration input {
+  width: 18px;
+  height: 18px;
+
+  margin-top: 2px;
+
+  flex-shrink: 0;
+
+  accent-color: #138808;
 }
 
-.declaration-text{
-  font-size:13px;
-  line-height:1.55;
-  color:#555;
+.declaration-text {
+  font-size: 13px;
+
+  line-height: 1.55;
+
+  color: #555;
 }
 
-/* ================= SUBMIT ================= */
 
-.submit-btn{
-  width:100%;
-  margin-top:22px;
-  padding:15px;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(135deg,#8b0000,#b30000);
-  color:#fff;
-  font-size:16px;
-  font-weight:800;
-  cursor:pointer;
-  box-shadow:0 6px 18px rgba(139,0,0,.18);
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.submit-btn {
+  width: 100%;
+
+  margin-top: 22px;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #8b0000,
+    #b30000
+  );
+
+  color: #ffffff;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(139,0,0,0.18);
 }
 
-.submit-btn:disabled{
-  opacity:.65;
-  cursor:not-allowed;
+.submit-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
 }
 
-/* ================= SIGNATURE ================= */
 
-.signature{
-  margin-top:30px;
-  padding:20px;
-  background:linear-gradient(135deg,#fff,#f7faf7);
-  border:1px solid #d8d8d8;
-  border-left:5px solid #138808;
-  border-radius:12px;
+/* =========================================================
+   FINAL SIGN-OFF
+========================================================= */
+
+.final-signoff {
+  margin-top: 12px;
+
+  padding: 14px 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  background: #ffffff;
+
+  border: 1px solid #bdbdbd;
+
+  border-radius: 11px;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.04);
 }
 
-.signature .warm{
-  color:#555;
-  font-size:14px;
-  margin-bottom:7px;
+
+/* HANDSHAKE */
+
+.signoff-icon {
+  width: 58px;
+  height: 58px;
+
+  min-width: 58px;
+
+  border-radius: 50%;
+
+  background: #138808;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 27px;
 }
 
-.signature .name{
-  color:#8b0000;
-  font-size:19px;
-  font-weight:800;
-  margin-bottom:6px;
+
+/* SIGNOFF CONTENT */
+
+.signoff-content {
+  flex: 1;
+
+  min-width: 0;
 }
 
-.signature .designation{
-  color:#333;
-  font-size:14px;
-  line-height:1.6;
+.warm-regards {
+  color: #138808;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  margin-bottom: 3px;
 }
 
-.signature .phone{
-  margin-top:10px;
-  color:#8b0000;
-  font-size:14px;
-  font-weight:800;
+.signoff-name {
+  color: #8b0000;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  margin-bottom: 4px;
 }
 
-/* ================= SUCCESS ================= */
-
-.success{
-  display:none;
-  text-align:center;
+.signoff-name span {
+  font-size: 16px;
 }
 
-.success-icon{
-  width:72px;
-  height:72px;
-  margin:5px auto 16px;
-  border-radius:50%;
-  background:#e6f5e8;
-  color:#138808;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:38px;
-  font-weight:bold;
+.signoff-designation {
+  color: #333;
+
+  font-size: 14px;
+
+  line-height: 1.4;
 }
 
-.success h2{
-  color:#138808;
-  font-size:24px;
-  margin:10px 0;
+.signoff-phone {
+  margin-top: 7px;
+
+  color: #b00000;
+
+  font-size: 14px;
+
+  font-weight: 800;
 }
 
-.success p{
-  color:#555;
-  font-size:14px;
-  line-height:1.55;
+
+/* LEGAL SCALES */
+
+.legal-symbol {
+  width: 100px;
+
+  min-width: 100px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 68px;
+
+  line-height: 1;
+
+  color: #b8d0b8;
 }
 
-.district-box{
-  margin:22px 0;
-  padding:17px;
-  background:#fafafa;
-  border:1px solid #ddd;
-  border-radius:11px;
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success {
+  display: none;
+
+  text-align: center;
 }
 
-.district-label{
-  color:#777;
-  font-size:12px;
-  text-transform:uppercase;
+.success-icon {
+  width: 72px;
+  height: 72px;
+
+  margin: 5px auto 16px;
+
+  border-radius: 50%;
+
+  background: #e6f5e8;
+
+  color: #138808;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 38px;
+
+  font-weight: bold;
 }
 
-.district-name{
-  margin-top:6px;
-  color:#8b0000;
-  font-size:21px;
-  font-weight:800;
+.success h2 {
+  color: #138808;
+
+  font-size: 24px;
+
+  margin: 10px 0;
 }
 
-/* ================= WHATSAPP ================= */
+.success p {
+  color: #555;
 
-.whatsapp-btn{
-  display:block;
-  width:100%;
-  padding:15px;
-  border-radius:10px;
-  background:#138808;
-  color:#fff;
-  text-decoration:none;
-  font-size:16px;
-  font-weight:800;
-  box-shadow:0 6px 18px rgba(19,136,8,.18);
+  font-size: 14px;
+
+  line-height: 1.55;
 }
 
-.note{
-  margin-top:15px;
-  color:#777;
-  font-size:12px;
-  line-height:1.5;
+
+/* =========================================================
+   DISTRICT RESULT
+========================================================= */
+
+.district-box {
+  margin: 22px 0;
+
+  padding: 17px;
+
+  background: #fafafa;
+
+  border: 1px solid #ddd;
+
+  border-radius: 11px;
 }
 
-/* ================= FOOTER ================= */
+.district-label {
+  color: #777;
 
-.footer{
-  text-align:center;
-  margin-top:15px;
-  padding:8px 0 12px;
-  color:#777;
-  font-size:12px;
-  line-height:1.6;
+  font-size: 12px;
+
+  text-transform: uppercase;
 }
 
-.footer .hp-congress{
-  font-weight:700;
-  color:#555;
+.district-name {
+  margin-top: 6px;
+
+  color: #8b0000;
+
+  font-size: 21px;
+
+  font-weight: 800;
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:600px){
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
 
-  body{
-    padding:7px;
+.whatsapp-btn {
+  display: block;
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  background: #138808;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  box-shadow: 0 6px 18px rgba(19,136,8,0.18);
+}
+
+.note {
+  margin-top: 15px;
+
+  color: #777;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  text-align: center;
+
+  margin-top: 10px;
+
+  padding: 15px 5px 14px;
+
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #780000,
+    #b40000
+  );
+
+  border-top: 5px solid #138808;
+
+  border-radius: 0 0 15px 15px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.footer .hp-congress {
+  font-size: 18px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  body {
+    padding: 7px;
   }
 
-  .header{
-    min-height:185px;
-    padding:22px 85px;
+  .header {
+    min-height: 185px;
+
+    padding: 22px 85px;
   }
 
-  .header h1{
-    font-size:17px;
+  .header h1 {
+    font-size: 17px;
   }
 
-  .header h2{
-    font-size:18px;
-    margin:6px 0 8px;
+  .header h2 {
+    font-size: 18px;
+
+    margin: 6px 0 8px;
   }
 
-  .header p{
-    font-size:11px;
+  .header p {
+    font-size: 11px;
   }
 
-  .cm-photo{
-    left:5px;
-    width:68px;
-    height:125px;
+  .cm-photo {
+    left: 5px;
+
+    width: 68px;
+    height: 125px;
   }
 
-  .president-photo{
-    right:6px;
-    width:55px;
-    height:90px;
+  .president-photo {
+    right: 6px;
+
+    width: 55px;
+    height: 90px;
   }
 
-  .card{
-    padding:18px 15px 28px;
+  .card {
+    padding: 18px 15px 25px;
   }
 
-  .intro-section{
-    padding:16px;
+  .intro-section {
+    padding: 16px;
   }
 
-  .intro-section p{
-    font-size:13px;
+  .intro-section p {
+    font-size: 13px;
   }
 
-  .intro-section li{
-    font-size:12.5px;
+  .intro-section li {
+    font-size: 12.5px;
   }
 
-  .form-heading{
-    font-size:18px;
+  .form-heading {
+    font-size: 18px;
+  }
+
+
+  /* SIGN-OFF MOBILE */
+
+  .final-signoff {
+    padding: 13px 10px;
+
+    gap: 9px;
+  }
+
+  .signoff-icon {
+    width: 45px;
+    height: 45px;
+
+    min-width: 45px;
+
+    font-size: 21px;
+  }
+
+  .warm-regards {
+    font-size: 13px;
+  }
+
+  .signoff-name {
+    font-size: 16px;
+  }
+
+  .signoff-name span {
+    font-size: 13px;
+  }
+
+  .signoff-designation {
+    font-size: 11px;
+
+    line-height: 1.35;
+  }
+
+  .signoff-phone {
+    font-size: 11px;
+  }
+
+  .legal-symbol {
+    width: 52px;
+
+    min-width: 52px;
+
+    font-size: 42px;
   }
 
 }
 
-/* VERY SMALL MOBILE */
 
-@media(max-width:380px){
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
 
-  .header{
-    min-height:170px;
-    padding-left:68px;
-    padding-right:68px;
+@media (max-width: 380px) {
+
+  .header {
+    min-height: 170px;
+
+    padding-left: 68px;
+
+    padding-right: 68px;
   }
 
-  .header h1{
-    font-size:15px;
+  .header h1 {
+    font-size: 15px;
   }
 
-  .header h2{
-    font-size:16px;
+  .header h2 {
+    font-size: 16px;
   }
 
-  .header p{
-    font-size:10px;
+  .header p {
+    font-size: 10px;
   }
 
-  .cm-photo{
-    width:55px;
-    height:105px;
+  .cm-photo {
+    width: 55px;
+    height: 105px;
   }
 
-  .president-photo{
-    width:45px;
-    height:75px;
+  .president-photo {
+    width: 45px;
+    height: 75px;
+  }
+
+  .final-signoff {
+    gap: 7px;
+
+    padding: 11px;
+  }
+
+  .signoff-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    font-size: 18px;
+  }
+
+  .signoff-name {
+    font-size: 14px;
+  }
+
+  .signoff-name span {
+    font-size: 12px;
+  }
+
+  .signoff-designation {
+    font-size: 10px;
+  }
+
+  .signoff-phone {
+    font-size: 10px;
+  }
+
+  .legal-symbol {
+    width: 42px;
+
+    min-width: 42px;
+
+    font-size: 34px;
   }
 
 }
@@ -506,12 +881,14 @@ select:focus{
 <div class="container">
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <div class="header">
 
 
-  <!-- LEFT / CM IMAGE -->
+  <!-- CM IMAGE -->
 
   <img
     src="cm.jpg"
@@ -539,7 +916,7 @@ select:focus{
   </div>
 
 
-  <!-- RIGHT / PRESIDENT IMAGE -->
+  <!-- PRESIDENT IMAGE -->
 
   <img
     src="president.jpg"
@@ -553,12 +930,16 @@ select:focus{
 <div class="green-line"></div>
 
 
-<!-- ================= MAIN CARD ================= -->
+<!-- =====================================================
+     MAIN CARD
+===================================================== -->
 
 <div class="card">
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================================
+     INTRODUCTION
+===================================================== -->
 
 <div class="intro-section">
 
@@ -619,32 +1000,7 @@ select:focus{
   </p>
 
 
-  <!-- ================= SIGNATURE ================= -->
-
-  <div class="signature">
-
-    <div class="warm">
-      With warm regards,
-    </div>
-
-    <div class="name">
-      Tejasvi Sharma (Advocate)
-    </div>
-
-    <div class="designation">
-      State Chairman<br>
-      Law, Human Rights & RTI Department<br>
-      Himachal Pradesh Congress Committee
-    </div>
-
-    <div class="phone">
-      88940-40655 &nbsp; | &nbsp; 82193-57120
-    </div>
-
-  </div>
-
-
-  <!-- ================= REGISTRATION HEADING ================= -->
+  <!-- REGISTRATION HEADING -->
 
   <div class="form-heading">
     ADVOCATE REGISTRATION
@@ -659,7 +1015,9 @@ select:focus{
 </div>
 
 
-<!-- ================= FORM ================= -->
+<!-- =====================================================
+     FORM
+===================================================== -->
 
 <div id="formArea">
 
@@ -667,7 +1025,7 @@ select:focus{
 <form id="registrationForm">
 
 
-  <!-- PERSONAL -->
+  <!-- PERSONAL DETAILS -->
 
   <div class="section-title">
     Personal Details
@@ -677,7 +1035,8 @@ select:focus{
   <div class="field">
 
     <label>
-      Full Name <span class="required">*</span>
+      Full Name
+      <span class="required">*</span>
     </label>
 
     <input
@@ -710,7 +1069,8 @@ select:focus{
   <div class="field">
 
     <label>
-      Email ID <span class="required">*</span>
+      Email ID
+      <span class="required">*</span>
     </label>
 
     <input
@@ -726,7 +1086,8 @@ select:focus{
   <div class="field">
 
     <label>
-      Mobile Number <span class="required">*</span>
+      Mobile Number
+      <span class="required">*</span>
     </label>
 
     <input
@@ -745,7 +1106,8 @@ select:focus{
   <div class="field">
 
     <label>
-      WhatsApp Number <span class="required">*</span>
+      WhatsApp Number
+      <span class="required">*</span>
     </label>
 
     <input
@@ -761,7 +1123,7 @@ select:focus{
   </div>
 
 
-  <!-- PROFESSIONAL -->
+  <!-- PROFESSIONAL DETAILS -->
 
   <div class="section-title professional">
     Professional Details
@@ -771,7 +1133,8 @@ select:focus{
   <div class="field">
 
     <label>
-      Bar Association <span class="required">*</span>
+      Bar Association
+      <span class="required">*</span>
     </label>
 
     <input
@@ -823,11 +1186,15 @@ select:focus{
   <div class="field">
 
     <label>
-      District <span class="required">*</span>
+      District
+      <span class="required">*</span>
     </label>
 
 
-    <select id="district" required>
+    <select
+      id="district"
+      required
+    >
 
       <option value="">
         Select District
@@ -915,16 +1282,68 @@ select:focus{
     class="submit-btn"
     id="submitButton"
   >
-    SUBMIT REGISTRATION
+    ✈ &nbsp; SUBMIT REGISTRATION
   </button>
 
 
 </form>
 
+
+<!-- =====================================================
+     FINAL SIGN-OFF
+===================================================== -->
+
+<div class="final-signoff">
+
+
+  <!-- LEFT HANDSHAKE -->
+
+  <div class="signoff-icon">
+    🤝
+  </div>
+
+
+  <!-- SIGN-OFF TEXT -->
+
+  <div class="signoff-content">
+
+    <div class="warm-regards">
+      With warm regards,
+    </div>
+
+    <div class="signoff-name">
+      Tejasvi Sharma <span>(Advocate)</span>
+    </div>
+
+    <div class="signoff-designation">
+      State Chairman<br>
+      Law, Human Rights & RTI Department<br>
+      Himachal Pradesh Congress Committee
+    </div>
+
+    <div class="signoff-phone">
+      ☎ 88940-40655 &nbsp; | &nbsp; 82193-57120
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT LEGAL SYMBOL -->
+
+  <div class="legal-symbol">
+    ⚖
+  </div>
+
+
 </div>
 
 
-<!-- ================= SUCCESS ================= -->
+</div>
+
+
+<!-- =====================================================
+     SUCCESS
+===================================================== -->
 
 <div
   id="successArea"
@@ -991,7 +1410,9 @@ select:focus{
 </div>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <div class="footer">
 
@@ -1012,17 +1433,17 @@ select:focus{
 <script>
 
 
-/* ==========================================
+/* =========================================================
    APPS SCRIPT BACKEND
-========================================== */
+========================================================= */
 
 const API_URL =
 'https://script.google.com/macros/s/AKfycbxMWbIjqpdctRGcBYVHyydtCzeoFPTro38D2tV0zyFWO5ZzdYJBIdwkW-wQ6EMtmvVI/exec';
 
 
-/* ==========================================
+/* =========================================================
    DISTRICT WHATSAPP GROUPS
-========================================== */
+========================================================= */
 
 const groups = {
 
@@ -1065,108 +1486,108 @@ const groups = {
 };
 
 
-/* ==========================================
+/* =========================================================
    FORM SUBMISSION
-========================================== */
+========================================================= */
 
 document
 .getElementById('registrationForm')
 .addEventListener(
   'submit',
-  async function(event){
+  async function(event) {
 
     event.preventDefault();
 
 
     const button =
-    document.getElementById('submitButton');
+      document.getElementById('submitButton');
 
 
     button.disabled = true;
 
     button.innerText =
-    'SUBMITTING...';
+      'SUBMITTING...';
 
 
     const district =
-    document
-    .getElementById('district')
-    .value;
+      document
+        .getElementById('district')
+        .value;
 
 
     const data =
-    new URLSearchParams();
+      new URLSearchParams();
 
 
     data.append(
       'name',
       document
-      .getElementById('name')
-      .value
-      .trim()
+        .getElementById('name')
+        .value
+        .trim()
     );
 
 
     data.append(
       'parentName',
       document
-      .getElementById('parentName')
-      .value
-      .trim()
+        .getElementById('parentName')
+        .value
+        .trim()
     );
 
 
     data.append(
       'email',
       document
-      .getElementById('email')
-      .value
-      .trim()
+        .getElementById('email')
+        .value
+        .trim()
     );
 
 
     data.append(
       'mobile',
       document
-      .getElementById('mobile')
-      .value
-      .trim()
+        .getElementById('mobile')
+        .value
+        .trim()
     );
 
 
     data.append(
       'whatsapp',
       document
-      .getElementById('whatsapp')
-      .value
-      .trim()
+        .getElementById('whatsapp')
+        .value
+        .trim()
     );
 
 
     data.append(
       'bar',
       document
-      .getElementById('bar')
-      .value
-      .trim()
+        .getElementById('bar')
+        .value
+        .trim()
     );
 
 
     data.append(
       'enrollment',
       document
-      .getElementById('enrollment')
-      .value
-      .trim()
+        .getElementById('enrollment')
+        .value
+        .trim()
     );
 
 
     data.append(
       'year',
       document
-      .getElementById('year')
-      .value
-      .trim()
+        .getElementById('year')
+        .value
+        .trim()
     );
 
 
@@ -1176,47 +1597,47 @@ document
     );
 
 
-    try{
-
+    try {
 
       await fetch(
         API_URL,
         {
-          method:'POST',
-          mode:'no-cors',
-          body:data
+          method: 'POST',
+          mode: 'no-cors',
+          body: data
         }
       );
 
 
       document
-      .getElementById('formArea')
-      .style.display='none';
+        .getElementById('formArea')
+        .style.display = 'none';
 
 
       document
-      .getElementById('successArea')
-      .style.display='block';
+        .getElementById('successArea')
+        .style.display = 'block';
 
 
       document
-      .getElementById('selectedDistrict')
-      .innerText=district;
+        .getElementById('selectedDistrict')
+        .innerText = district;
 
 
       document
-      .getElementById('whatsappButton')
-      .href=groups[district];
+        .getElementById('whatsappButton')
+        .href = groups[district];
 
 
       window.scrollTo({
-        top:0,
-        behavior:'smooth'
+        top: 0,
+        behavior: 'smooth'
       });
 
+    }
 
-    }catch(error){
 
+    catch(error) {
 
       console.error(error);
 
@@ -1226,10 +1647,11 @@ document
       );
 
 
-      button.disabled=false;
+      button.disabled = false;
 
-      button.innerText=
-      'SUBMIT REGISTRATION';
+
+      button.innerText =
+        '✈  SUBMIT REGISTRATION';
 
     }
 
