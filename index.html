@@ -40,12 +40,12 @@ body{
     height:160px;
     overflow:hidden;
     background:#fff;
-    border-radius:4px 4px 0 0;
+    border-radius:5px 5px 0 0;
 }
 
 
 /* =====================================================
-   REFERENCE-STYLE TRICOLOUR BACKGROUND
+   TRICOLOUR BACKGROUND
 ===================================================== */
 
 .header-svg{
@@ -58,7 +58,7 @@ body{
 
 
 /* =====================================================
-   CENTER CONTENT
+   CENTER HEADER
 ===================================================== */
 
 .header-content{
@@ -74,9 +74,6 @@ body{
 
     text-align:center;
 }
-
-
-/* Congress logo */
 
 .congress-logo{
     width:53px;
@@ -97,9 +94,6 @@ body{
     box-shadow:0 2px 7px rgba(0,0,0,.15);
 }
 
-
-/* Department */
-
 .department{
     color:#222;
 
@@ -111,9 +105,6 @@ body{
 
     white-space:nowrap;
 }
-
-
-/* Congress */
 
 .congress-name{
     margin-top:3px;
@@ -128,9 +119,6 @@ body{
 
     white-space:nowrap;
 }
-
-
-/* Network */
 
 .network{
     margin-top:5px;
@@ -164,8 +152,7 @@ body{
 
     border-radius:50%;
 
-    box-shadow:
-        0 3px 10px rgba(0,0,0,.22);
+    box-shadow:0 3px 10px rgba(0,0,0,.22);
 }
 
 .person img{
@@ -181,9 +168,6 @@ body{
     border-radius:50%;
 }
 
-
-/* LEFT CM */
-
 .cm{
     left:28px;
     top:19px;
@@ -191,9 +175,6 @@ body{
     width:112px;
     height:112px;
 }
-
-
-/* RIGHT PRESIDENT */
 
 .president{
     right:28px;
@@ -205,7 +186,7 @@ body{
 
 
 /* =====================================================
-   GREEN BASE LINE
+   HEADER GREEN LINE
 ===================================================== */
 
 .header-line{
@@ -313,7 +294,7 @@ body{
 
 
 /* =====================================================
-   SECTIONS
+   SECTION TITLES
 ===================================================== */
 
 .section-title{
@@ -455,7 +436,7 @@ select:focus{
 
     background:#990000;
 
-    color:white;
+    color:#fff;
 
     font-size:16px;
 
@@ -470,19 +451,20 @@ select:focus{
 
 .submit:disabled{
     opacity:.65;
+    cursor:not-allowed;
 }
 
 
 /* =====================================================
-   SUCCESS
+   SUCCESS PAGE
 ===================================================== */
 
 .success{
     display:none;
 
-    margin-top:20px;
+    margin-top:0;
 
-    padding:22px 16px;
+    padding:22px 16px 20px;
 
     text-align:center;
 
@@ -523,7 +505,7 @@ select:focus{
     font-size:23px;
 }
 
-.success p{
+.success > p{
     color:#666;
 
     font-size:13px;
@@ -554,6 +536,8 @@ select:focus{
     font-size:11px;
 
     text-transform:uppercase;
+
+    letter-spacing:.5px;
 }
 
 .district-name{
@@ -597,11 +581,13 @@ select:focus{
     color:#777;
 
     font-size:11px;
+
+    line-height:1.5;
 }
 
 
 /* =====================================================
-   TEJASVI SIGN OFF
+   TEJASVI SIGN-OFF
 ===================================================== */
 
 .signoff{
@@ -690,6 +676,8 @@ select:focus{
     color:#c6ddc6;
 
     font-size:68px;
+
+    line-height:1;
 }
 
 
@@ -855,7 +843,9 @@ select:focus{
     .handshake{
         width:43px;
         height:43px;
+
         min-width:43px;
+
         font-size:20px;
     }
 
@@ -882,6 +872,10 @@ select:focus{
     .balance{
         font-size:42px;
     }
+
+    .success{
+        padding:20px 10px;
+    }
 }
 
 </style>
@@ -899,11 +893,6 @@ select:focus{
 
 <header class="header">
 
-
-<!-- =====================================================
-     REFERENCE STYLE BACKGROUND
-===================================================== -->
-
 <svg
     class="header-svg"
     viewBox="0 0 1000 160"
@@ -911,126 +900,115 @@ select:focus{
     xmlns="http://www.w3.org/2000/svg"
 >
 
-    <!-- WHITE BASE -->
-    <rect
-        x="0"
-        y="0"
-        width="1000"
-        height="160"
-        fill="#ffffff"
-    />
+<!-- WHITE BASE -->
+
+<rect
+    x="0"
+    y="0"
+    width="1000"
+    height="160"
+    fill="#ffffff"
+/>
 
 
-    <!-- =================================================
-         SAFFRON TOP
-    ================================================== -->
+<!-- =================================================
+     SAFFRON
+================================================== -->
 
-    <path
-        d="
-        M0 0
-        L760 0
-        C630 16 500 27 370 50
-        C235 73 105 82 0 69
-        Z"
-        fill="#ff7900"
-    />
+<path
+    d="
+    M0 0
+    L760 0
+    C630 16 500 27 370 50
+    C235 73 105 82 0 69
+    Z"
+    fill="#ff7900"
+/>
 
+<path
+    d="
+    M0 17
+    C150 38 270 38 405 20
+    C545 2 650 -4 790 0
+    L1000 0
+    L1000 13
+    C850 8 720 15 575 32
+    C390 55 190 65 0 43
+    Z"
+    fill="#fff"
+/>
 
-    <!-- saffron inner white cut -->
-    <path
-        d="
-        M0 17
-        C150 38 270 38 405 20
-        C545 2 650 -4 790 0
-        L1000 0
-        L1000 13
-        C850 8 720 15 575 32
-        C390 55 190 65 0 43
-        Z"
-        fill="#ffffff"
-    />
-
-
-    <!-- light saffron ribbon -->
-    <path
-        d="
-        M0 44
-        C185 62 340 52 500 28
-        C650 7 800 -2 1000 0
+<path
+    d="
+    M0 44
+    C185 62 340 52 500 28
+    C650 7 800 -2 1000 0
     "
-        fill="none"
-        stroke="#ffd19b"
-        stroke-width="5"
-    />
+    fill="none"
+    stroke="#ffd19b"
+    stroke-width="5"
+/>
 
-
-    <!-- soft grey ribbon -->
-    <path
-        d="
-        M0 59
-        C190 77 350 67 520 40
-        C700 13 850 8 1000 15
+<path
+    d="
+    M0 59
+    C190 77 350 67 520 40
+    C700 13 850 8 1000 15
     "
-        fill="none"
-        stroke="#eeeeee"
-        stroke-width="4"
-    />
+    fill="none"
+    stroke="#eeeeee"
+    stroke-width="4"
+/>
 
 
-    <!-- =================================================
-         GREEN BOTTOM
-    ================================================== -->
+<!-- =================================================
+     GREEN
+================================================== -->
 
-    <path
-        d="
-        M1000 160
-        L240 160
-        C380 137 515 123 650 105
-        C790 87 910 76 1000 87
-        Z"
-        fill="#138808"
-    />
+<path
+    d="
+    M1000 160
+    L240 160
+    C380 137 515 123 650 105
+    C790 87 910 76 1000 87
+    Z"
+    fill="#138808"
+/>
 
+<path
+    d="
+    M1000 145
+    C850 132 720 139 575 155
+    C450 169 335 171 220 160
+    L0 160
+    L0 145
+    C180 157 340 145 505 120
+    C680 94 830 83 1000 99
+    Z"
+    fill="#fff"
+/>
 
-    <!-- white cut -->
-    <path
-        d="
-        M1000 145
-        C850 132 720 139 575 155
-        C450 169 335 171 220 160
-        L0 160
-        L0 145
-        C180 157 340 145 505 120
-        C680 94 830 83 1000 99
-        Z"
-        fill="#ffffff"
-    />
-
-
-    <!-- light green ribbon -->
-    <path
-        d="
-        M0 151
-        C180 163 335 150 510 123
-        C690 96 840 86 1000 101
+<path
+    d="
+    M0 151
+    C180 163 335 150 510 123
+    C690 96 840 86 1000 101
     "
-        fill="none"
-        stroke="#c9e5c5"
-        stroke-width="5"
-    />
+    fill="none"
+    stroke="#c9e5c5"
+    stroke-width="5"
+/>
 
-
-    <!-- green inner ribbon -->
-    <path
-        d="
-        M0 160
-        C200 166 365 147 530 121
-        C720 91 855 83 1000 94
+<path
+    d="
+    M0 160
+    C200 166 365 147 530 121
+    C720 91 855 83 1000 94
     "
-        fill="none"
-        stroke="#e5f0e3"
-        stroke-width="4"
-    />
+    fill="none"
+    stroke="#e5f0e3"
+    stroke-width="4"
+/>
 
 </svg>
 
@@ -1041,10 +1019,10 @@ select:focus{
 
 <div class="person cm">
 
-    <img
-        src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/cm.png"
-        alt="Chief Minister"
-    >
+<img
+    src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/cm.png"
+    alt="Chief Minister"
+>
 
 </div>
 
@@ -1055,23 +1033,23 @@ select:focus{
 
 <div class="header-content">
 
-    <img
-        src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/congress.png"
-        class="congress-logo"
-        alt="Congress"
-    >
+<img
+    src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/congress.png"
+    class="congress-logo"
+    alt="Congress"
+>
 
-    <div class="department">
-        Law, Human Rights &amp; RTI Department
-    </div>
+<div class="department">
+Law, Human Rights &amp; RTI Department
+</div>
 
-    <div class="congress-name">
-        Himachal Pradesh Congress
-    </div>
+<div class="congress-name">
+Himachal Pradesh Congress
+</div>
 
-    <div class="network">
-        Advocate Registration &amp; District Coordination Network
-    </div>
+<div class="network">
+Advocate Registration &amp; District Coordination Network
+</div>
 
 </div>
 
@@ -1082,13 +1060,12 @@ select:focus{
 
 <div class="person president">
 
-    <img
-        src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/president.png"
-        alt="Congress President"
-    >
+<img
+    src="https://raw.githubusercontent.com/hplawhub/adv-registration/main/president.png"
+    alt="Congress President"
+>
 
 </div>
-
 
 </header>
 
@@ -1104,8 +1081,16 @@ select:focus{
 
 
 <!-- =====================================================
-     INTRO
+     REGISTRATION CONTENT
+     
+     IMPORTANT:
+     THIS ENTIRE BLOCK DISAPPEARS AFTER SUBMIT
 ===================================================== -->
+
+<div id="registrationContent">
+
+
+<!-- INTRO -->
 
 <div class="intro">
 
@@ -1168,6 +1153,7 @@ district will be displayed automatically.
 ADVOCATE REGISTRATION
 </div>
 
+
 <div class="form-subtitle">
 Please complete the form below
 </div>
@@ -1178,8 +1164,6 @@ Please complete the form below
 <!-- =====================================================
      FORM
 ===================================================== -->
-
-<div id="registrationContent">
 
 <form id="registrationForm">
 
@@ -1282,9 +1266,12 @@ required
 
 </div>
 
-
 </div>
 
+
+<!-- =====================================================
+     PROFESSIONAL DETAILS
+===================================================== -->
 
 <div class="section-title green">
 Professional Details
@@ -1352,7 +1339,10 @@ District
 <span class="required">*</span>
 </label>
 
-<select id="district" required>
+<select
+id="district"
+required
+>
 
 <option value="">
 Select District
@@ -1400,6 +1390,8 @@ Himachal Pradesh Congress.
 </div>
 
 
+<!-- SUBMIT -->
+
 <button
 type="submit"
 class="submit"
@@ -1415,10 +1407,16 @@ id="submitButton"
 
 
 <!-- =====================================================
-     SUCCESS
+     SUCCESS AREA
+
+     THIS IS HIDDEN INITIALLY.
+     IT APPEARS ONLY AFTER SUBMISSION.
 ===================================================== -->
 
-<div id="successArea" class="success">
+<div
+id="successArea"
+class="success"
+>
 
 
 <div class="success-icon">
@@ -1473,7 +1471,7 @@ for district-level coordination and communication.
 
 
 <!-- =====================================================
-     SIGN OFF — AFTER SUBMISSION ONLY
+     TEJASVI SHARMA SIGN-OFF
 ===================================================== -->
 
 <div class="signoff">
@@ -1490,16 +1488,19 @@ for district-level coordination and communication.
 With warm regards,
 </div>
 
+
 <div class="name">
 Tejasvi Sharma
 <span>(Advocate)</span>
 </div>
+
 
 <div class="designation">
 State Chairman<br>
 Law, Human Rights &amp; RTI Department<br>
 Himachal Pradesh Congress Committee
 </div>
+
 
 <div class="phone">
 ☎ 88940-40655
@@ -1600,23 +1601,26 @@ const groups = {
 
 
 /* =====================================================
-   SUBMIT
+   FORM SUBMISSION
 ===================================================== */
 
 document
 .getElementById("registrationForm")
-.addEventListener("submit",async function(e){
+.addEventListener(
+"submit",
+async function(event){
 
-    e.preventDefault();
+    event.preventDefault();
 
 
     const button =
         document.getElementById("submitButton");
 
 
-    button.disabled=true;
+    button.disabled = true;
 
-    button.innerText="SUBMITTING...";
+    button.innerText =
+        "SUBMITTING...";
 
 
     const district =
@@ -1631,43 +1635,75 @@ document
 
     data.append(
         "name",
-        document.getElementById("name").value.trim()
+        document
+        .getElementById("name")
+        .value
+        .trim()
     );
+
 
     data.append(
         "parentName",
-        document.getElementById("parentName").value.trim()
+        document
+        .getElementById("parentName")
+        .value
+        .trim()
     );
+
 
     data.append(
         "email",
-        document.getElementById("email").value.trim()
+        document
+        .getElementById("email")
+        .value
+        .trim()
     );
+
 
     data.append(
         "mobile",
-        document.getElementById("mobile").value.trim()
+        document
+        .getElementById("mobile")
+        .value
+        .trim()
     );
+
 
     data.append(
         "whatsapp",
-        document.getElementById("whatsapp").value.trim()
+        document
+        .getElementById("whatsapp")
+        .value
+        .trim()
     );
+
 
     data.append(
         "bar",
-        document.getElementById("bar").value.trim()
+        document
+        .getElementById("bar")
+        .value
+        .trim()
     );
+
 
     data.append(
         "enrollment",
-        document.getElementById("enrollment").value.trim()
+        document
+        .getElementById("enrollment")
+        .value
+        .trim()
     );
+
 
     data.append(
         "year",
-        document.getElementById("year").value.trim()
+        document
+        .getElementById("year")
+        .value
+        .trim()
     );
+
 
     data.append(
         "district",
@@ -1676,6 +1712,10 @@ document
 
 
     try{
+
+        /*
+         * DATA IS SENT TO GOOGLE SHEETS
+         */
 
         await fetch(
             API_URL,
@@ -1687,25 +1727,55 @@ document
         );
 
 
+        /*
+         * IMPORTANT:
+         *
+         * HIDE THE COMPLETE FIRST PAGE.
+         *
+         * This includes:
+         * Welcome
+         * Registration Instructions
+         * District Coordination
+         * Advocate Registration
+         * Form
+         */
+
         document
         .getElementById("registrationContent")
-        .style.display="none";
+        .style.display = "none";
 
+
+        /*
+         * SHOW ONLY SUCCESS PAGE
+         */
 
         document
         .getElementById("successArea")
-        .style.display="block";
+        .style.display = "block";
 
+
+        /*
+         * SHOW DISTRICT
+         */
 
         document
         .getElementById("selectedDistrict")
-        .innerText=district;
+        .innerText = district;
 
+
+        /*
+         * DISTRICT WHATSAPP LINK
+         */
 
         document
         .getElementById("whatsappButton")
-        .href=groups[district];
+        .href =
+            groups[district] || "#";
 
+
+        /*
+         * SCROLL TO SUCCESS
+         */
 
         document
         .getElementById("successArea")
@@ -1720,14 +1790,17 @@ document
 
         console.error(error);
 
+
         alert(
             "Registration could not be completed. Please try again."
         );
 
-        button.disabled=false;
 
-        button.innerText=
+        button.disabled = false;
+
+        button.innerText =
             "✈  SUBMIT REGISTRATION";
+
     }
 
 });
